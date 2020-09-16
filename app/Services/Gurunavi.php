@@ -13,7 +13,7 @@ class Gurunavi
       ->get(self::RESTAURANTS_SEARCH_API_URL,[
         'query' =>[
           'keyid' => env('GURUNAVI_ACCESS_KEY'),
-          'freeword' => str_replace('','',$word),
+          'freeword' => str_replace('',',',$word),
         ],
         'http_errors' => false,
       ]);
